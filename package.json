@@ -1,0 +1,53 @@
+{
+  "name": "cryptoad-agentkit",
+  "version": "0.1.0",
+  "description": "Coinbase AgentKit action provider for CryptoAd Network: let an agent buy crypto advertising with USDC over x402.",
+  "keywords": [
+    "agentkit",
+    "x402",
+    "advertising",
+    "crypto",
+    "ai-agents",
+    "usdc",
+    "base"
+  ],
+  "homepage": "https://cryptoadvertising.net/agents",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "@coinbase/agentkit": ">=0.10.0"
+  },
+  "dependencies": {
+    "@x402/evm": "2.30.0",
+    "@x402/fetch": "2.30.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@coinbase/agentkit": "0.10.4",
+    "typescript": "5.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CryptoAdvertisingNet/cryptoad-agentkit.git"
+  }
+}
